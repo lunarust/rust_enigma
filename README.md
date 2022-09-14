@@ -38,10 +38,12 @@ I have big doubts this will ever work on Windows...
 
 ## Features
 
+
 Providing the following:
-https://web.stanford.edu/class/cs106j/handouts/36-TheEnigmaMachine.pdf
-https://www.codesandciphers.org.uk/enigma/rotorspec.htm
-https://www.codesandciphers.org.uk/enigma/example1.htm
+
+[Stanford, the Enigma machine] (https://web.stanford.edu/class/cs106j/handouts/36-TheEnigmaMachine.pdf)
+[Code & ciphers #Rotorspec] (https://www.codesandciphers.org.uk/enigma/rotorspec.htm)
+[Code & ciphers #ex] (https://www.codesandciphers.org.uk/enigma/example1.htm)
 
 
 3 ROTORS selected out of 5 in stock > in settings
@@ -61,24 +63,21 @@ Unsure why medium rotor will move during the operation! or just at the end.
 
 
  
-
-INPUT	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
-Rotor I	E	K	M	F	L	G	D	Q	V	Z	N	T	O	W	Y	H	X	U	S	P	A	I	B	R	C	J
+```
+INPUT		A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
+Rotor I		E	K	M	F	L	G	D	Q	V	Z	N	T	O	W	Y	H	X	U	S	P	A	I	B	R	C	J
 Rotor II	A	J	D	K	S	I	R	U	X	B	L	H	W	T	M	C	Q	G	Z	N	P	Y	F	V	O	E
 Rotor III	B	D	F	H	J	L	C	P	R	T	X	V	Z	N	Y	E	I	W	G	A	K	M	U	S	Q	O
 Rotor IV	E	S	O	V	P	Z	J	A	Y	Q	U	I	R	H	X	L	N	F	T	G	K	D	C	M	W	B
-Rotor V	V	Z	B	R	G	I	T	Y	U	P	S	D	N	H	L	X	A	W	M	J	Q	O	F	E	C	K
+Rotor V		V	Z	B	R	G	I	T	Y	U	P	S	D	N	H	L	X	A	W	M	J	Q	O	F	E	C	K
 reflector C	(AF) (BV) (CP) (DJ) (EI) (GO) (HY) (KR) (LZ) (MX) (NW) (TQ) (SU)
-
-INPUT	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z
-
+```
 
 ## Todo
 [ ] Rotor advancements as follow:
 The right rotor advances on every character and is therefore called the fast rotor. The
 middle rotor advances once every 26 characters and is called the medium rotor. The left
 rotor advances only once every 676 (26 × 26) characters and is called the slow rotor. 
-
 
 
 ## Contributing
