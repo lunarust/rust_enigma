@@ -1,5 +1,5 @@
 # Rusty enigma machine
-> Still playing around, please keep gentle (⌒‿⌒)
+> Still playing around (⌒‿⌒)
 
 ## Getting started with Rust
 
