@@ -41,25 +41,23 @@ I have big doubts this will ever work on Windows...
 
 Providing the following:
 
-[Stanford, the Enigma machine] (https://web.stanford.edu/class/cs106j/handouts/36-TheEnigmaMachine.pdf)
-[Code & ciphers #Rotorspec] (https://www.codesandciphers.org.uk/enigma/rotorspec.htm)
-[Code & ciphers #ex] (https://www.codesandciphers.org.uk/enigma/example1.htm)
+- [Stanford, the Enigma machine] (https://web.stanford.edu/class/cs106j/handouts/36-TheEnigmaMachine.pdf)
+- [Code & ciphers #Rotorspec] (https://www.codesandciphers.org.uk/enigma/rotorspec.htm)
+- [Code & ciphers #ex] (https://www.codesandciphers.org.uk/enigma/example1.htm)
 
 
-3 ROTORS selected out of 5 in stock > in settings
-Display windows shows letter of the current rotor setting
-
-Display the keys that are typed on keyboard + permutation
+3 ROTORS selected out of 5 in stock  
+Display the keys that are typed on keyboard + permutation  
 
 
-FAST ROTOR: Rotor on RIGHT is the one getting input from keyboard, Advances one each key stroke
-MEDIUM ROTOR: in the middle, advances evert 26 key stroke
-SLOW ROTOR: advances once evert 676 key stroke
+- FAST ROTOR: Rotor on RIGHT is the one getting input from keyboard, Advances one each key stroke
+- MEDIUM ROTOR: in the middle, advances evert 26 key stroke
+- SLOW ROTOR: advances once evert 676 key stroke
 
-When typing a letter the rotor settings ie JLY will move to JLZ
-Reflector implement a fixed permutation
-so fast rotor > medium > slow > reflector > slow > medium > fast > output
-Unsure why medium rotor will move during the operation! or just at the end.
+When typing a letter the rotor settings ie JLY will move to JLZ  
+Reflector implement a fixed permutation  
+so fast rotor > medium > slow > reflector > slow > medium > fast > output  
+Unsure why medium rotor will move during the operation! or just at the end.  
 
 
  
@@ -75,9 +73,10 @@ reflector C	(AF) (BV) (CP) (DJ) (EI) (GO) (HY) (KR) (LZ) (MX) (NW) (TQ) (SU)
 
 ## Todo
 [ ] Rotor advancements as follow:
-The right rotor advances on every character and is therefore called the fast rotor. The
-middle rotor advances once every 26 characters and is called the medium rotor. The left
-rotor advances only once every 676 (26 × 26) characters and is called the slow rotor. 
+
+> The right rotor advances on every character and is therefore called the fast rotor. The
+> middle rotor advances once every 26 characters and is called the medium rotor. The left
+> rotor advances only once every 676 (26 × 26) characters and is called the slow rotor. 
 
 
 ## Contributing
