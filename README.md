@@ -72,12 +72,11 @@ reflector C	(AF) (BV) (CP) (DJ) (EI) (GO) (HY) (KR) (LZ) (MX) (NW) (TQ) (SU)
 ```
 
 ## Todo
-[ ] Rotor advancements as follow:
-
+[X] Rotor advancements as follow:
 > The right rotor advances on every character and is therefore called the fast rotor. The
 > middle rotor advances once every 26 characters and is called the medium rotor. The left
 > rotor advances only once every 676 (26 × 26) characters and is called the slow rotor. 
-
+[ ] Need to clean up variables and type with conversion all over the place 
 
 ## Contributing
 
