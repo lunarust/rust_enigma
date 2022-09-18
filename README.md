@@ -5,7 +5,7 @@
 
 Install Rust on your local machine, to do so please follow the official documentation
 
-[Rust get starteds](https://www.rust-lang.org/learn/get-started)
+[Rust get started](https://www.rust-lang.org/learn/get-started)
 
 
 ### Get a local copy using git
@@ -34,7 +34,6 @@ You should be able to compile and build this code on either MacOS, Lin or Window
 However, all tests have been performed only for Linux.
 
 Build and documentation will be created under ./target/
-I have big doubts this will ever work on Windows... 
 
 ## Features
 
@@ -70,7 +69,7 @@ reflector C	(AF) (BV) (CP) (DJ) (EI) (GO) (HY) (KR) (LZ) (MX) (NW) (TQ) (SU)
 ```
 
 ## Todo
-- [x] Rotor advancements as follow:
+- [x] Rotor ticks as follow:
 > The right rotor advances on every character and is therefore called the fast rotor. The
 > middle rotor advances once every 26 characters and is called the medium rotor. The left
 > rotor advances only once every 676 (26 × 26) characters and is called the slow rotor. 
@@ -78,8 +77,10 @@ reflector C	(AF) (BV) (CP) (DJ) (EI) (GO) (HY) (KR) (LZ) (MX) (NW) (TQ) (SU)
 - [ ] Should handle error if the input on rotor selection is not numeric and is not in range
 
 
-## testing
-Back & forth is working with several tests...
+## Testing with Dylan Thomas, needed a long text
+Works back & forth ...
+Guess they would strip their text from anything non alphabetical. Replacing \n by (..) and skipping anything not in [[:alpha:]]
+Returning text all in lower case, guessing it would all be upper or lower.
 
 > Do not go gentle into that good night,(..)Old age should burn and rave at close of day;(..)Rage, rage against the dying of the light.(..)(..)Though wise men at their end know dark is right,(..)Because their words had forked no lightning they(..)Do not go gentle into that good night.(..)(..)Good men, the last wave by, crying how bright(..)Their frail deeds might have danced in a green bay,(..)Rage, rage against the dying of the light.(..)(..)Wild men who caught and sang the sun in flight,(..)And learn, too late, they grieved it on its way,(..)Do not go gentle into that good night.(..)(..)Grave men, near death, who see with blinding sight(..)Blind eyes could blaze like meteors and be gay,(..)Rage, rage against the dying of the light.(..)(..)And you, my father, there on the sad height,(..)Curse, bless, me now with your fierce tears, I pray.(..)Do not go gentle into that good night.(..)Rage, rage against the dying of the light.
 
