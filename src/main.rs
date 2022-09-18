@@ -29,12 +29,11 @@ fn main() {
 
     //println!("INPUT:");
     //println!("{:>10} ", outstring);
-    println!("Selected rotors: {:?} with setting: {:?}", &pickedrotors, &pickedsettings);
+    println!("Selected rotors: {:?} with settings: {:?}", &pickedrotors, &pickedsettings);
 
 
     // run the logic to encrypt the entire text / loop through char 
     for n in 0..outstring.chars().count() {                                                // looping in text to encrypt
-        
         if outstring.chars().nth(n).unwrap().is_alphabetic() {                             // running only on alphabetic characters  
             outstring = encrypt(
                 &outstring,                                                                // working string
@@ -43,12 +42,14 @@ fn main() {
                 &mut pickedsettings.iter().map(|c| *c as usize - 97).collect::<Vec<_>>()   // this is the pickedsettings converted to usize vector instead of char
                 );
 
-            // ticking the 3 rotors fast = each time, medium = every 26 times, slow = 676 every times 
+            // ticking the 3 rotors fast = each time, medium = every 26 times, slow = 676 every times
+            // fast rotor 
             if (pickedsettings[0] as u8 + 1) < 123 { pickedsettings[0] = (pickedsettings[0] as u8 + 1) as char; }
-            else { pickedsettings[0] = 'a'; }
-
+                else { pickedsettings[0] = 'a'; }
+            // medium rotor
             if n % 26 == 0 && n != 0 { if (pickedsettings[1] as u8 + 1) < 123 { pickedsettings[1] = (pickedsettings[1] as u8 + 1) as char; }
                 else { pickedsettings[1] = 'a'; }}
+            // slow rotor
             if n % 676 == 0 && n != 0 {  if (pickedsettings[2] as u8 + 1) < 123 { pickedsettings[2] = (pickedsettings[2] as u8 + 1) as char; }
                 else { pickedsettings[2] = 'a'; }}
         }
@@ -71,10 +72,10 @@ fn encrypt(clear: &String, myrotor: &mut Vec<usize>, inc: usize, rotating: &mut 
     
     //1. Looping in my 3 rotors right to left (fast, medium and slow)
     for n in 0..3 {
-        workingstring.replace_range((inc)..(inc+1), 
-            moverotor(ROTORS[myrotor[n]].to_lowercase(), rotating[n] as u8).chars().  // selected rotor with applied rotation
+        workingstring.replace_range((inc)..(inc+1),                                   // replace char at pos inc to inc+1
+            moverotor(ROTORS[myrotor[n]].to_lowercase(), rotating[n] as u8).chars().  // fetch rotated rotor
                 nth(String::from_iter(('a'..='z').into_iter().collect::<Vec<char>>()) // index from alphabet
-                    .find(workingstring.chars().nth(inc).unwrap()).unwrap())          // find char a-z at n  
+                    .find(workingstring.chars().nth(inc).unwrap()).unwrap())          // find char a-z at n position 
                 .unwrap().to_string().as_str()                                        // replace range requires &str
         );
         //println!("#{}: Rotor: [{}] ... {} Rotating: {}", n.to_string(), ROTORS[myrotor[n]], workingstring, rotating[n]);        
@@ -91,9 +92,9 @@ fn encrypt(clear: &String, myrotor: &mut Vec<usize>, inc: usize, rotating: &mut 
 
     //3. Looping back in my 3 rotors left to right (slow, medium and fast)
     for n in (0..3).rev() {
-        workingstring.replace_range((inc)..(inc+1), 
+        workingstring.replace_range((inc)..(inc+1),                                 // replace char at pos inc to inc+1
             (((
-                moverotor(ROTORS[myrotor[n]].to_lowercase(), rotating[n] as u8).    // rotates my rotor to new position
+                moverotor(ROTORS[myrotor[n]].to_lowercase(), rotating[n] as u8).    // fetch rotated rotor
                 find(workingstring.chars().nth(inc).unwrap())                       // find char in original string
                 .unwrap() as u8) + 97)                                              // match with a-z
             as char).to_string().as_str()                                           // replace in original string
