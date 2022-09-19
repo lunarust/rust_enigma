@@ -13,13 +13,20 @@ fn main() {
     // Select rotors to use out of the 5 available
     for n in 1..4 {
         println!("Select rotor [type: digit 0-4] #{}:", n.to_string());
-        pickedrotors.push(promptdata().parse::<usize>().unwrap());
+        let a = 0..4;
+        
+        let inputdata = promptdata().parse::<usize>()
+            .expect("This is not an integer, please select a number between 0-4!!!");   
+        assert!(a.contains(&inputdata),"please select a number between 0-4!!!");
+        pickedrotors.push(inputdata);
     }
 
     // Select settings for the rotors
     for n in 1..4 {
         println!("Select your current setting for rotor [type char] #{}", n.to_string());
-        pickedsettings.push(promptdata().chars().nth(0).unwrap());
+        let inputdata = promptdata().chars().nth(0).unwrap();
+        assert!(inputdata.is_alphabetic(), "Wrong input!!!");
+        pickedsettings.push(inputdata);
     }
 
     println!("Text you wish to encrypt?");

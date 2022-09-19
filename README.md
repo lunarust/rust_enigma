@@ -66,7 +66,7 @@ reflector C	(AF) (BV) (CP) (DJ) (EI) (GO) (HY) (KR) (LZ) (MX) (NW) (TQ) (SU)
 - [x] Rotor ticks as follow:
 > The right rotor advances on every character and is therefore called the fast rotor. The middle rotor advances once every 26 characters and is called the medium rotor. The left rotor advances only once every 676 (26 × 26) characters and is called the slow rotor. 
 - [x] Need to clean up variables and type with conversion all over the place 
-- [ ] Should handle error if the input on rotor selection is not numeric and is not in range
+- [x] Should handle error if the input on rotor selection is not numeric and is not in range
 
 
 ## Testing with Dylan Thomas
